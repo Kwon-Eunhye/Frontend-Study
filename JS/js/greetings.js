@@ -1,5 +1,3 @@
- 
-
 // const calculaotor = {
 //   add: function(a, b) {
 //     return a+b
@@ -23,7 +21,6 @@
 // calculaotor.times(10,2)
 // calculaotor.divide(10,2)
 // calculaotor.powerOf(10,2)
-
 
 // const age = parseInt( prompt("How old are you?"));  // parseInt : 스트링을 넘버 타입을 변경
 
@@ -54,7 +51,6 @@
 //   h1.style.color = 'blue'
 // }
 
-
 // function handleMouseEnter() {
 //   h1.innerText = 'Mouse is here'
 // }
@@ -63,12 +59,9 @@
 //   h1.innerText = 'Mouse is gone'
 // }
 
-
 // h1.addEventListener("click", handleh1Click)
 // h1.addEventListener("mouseenter", handleMouseEnter)
 // h1.addEventListener("mouseleave", handleMouseLeave)
-
-
 
 // const h1 = document.querySelector('.hello h1')
 
@@ -79,7 +72,6 @@
 //   h1.style.color = 'black'
 //   h1.style.backgroundColor = 'white'
 // }
-
 
 // function handleOffClick() {
 //   h1.innerText = 'OFF'
@@ -101,13 +93,9 @@
 // h1.addEventListener('mouseenter',handleOffClick)
 // h1.addEventListener('mouseleave',handleOnClick)
 
-
 // window.addEventListener('resize', handleWindowResize)
 // window.addEventListener('offline', handleWindowOffline)
 // window.addEventListener('online', handleWindowOnline)
-
-
-
 
 // const h1 = document.querySelector('.hello:first-child h1')
 
@@ -151,7 +139,6 @@
 
 // h1.addEventListener("click", handleTitleClick)
 
-
 // ----------------------------------------------------------------
 // [classList function을 활용하여 클래스이름 전체를 변경하는것이아니고
 // 해당 html 엘리먼트의 존재 유무에 따라 변경가능 ]
@@ -168,9 +155,7 @@
 //   console.log(h1.className)
 // }
 
-
 // h1.addEventListener("click", handleTitleClick)
-
 
 // =============================================================================
 // [classList.toggle(token) function : 해당 classname이 존재하면 삭제/ 없으면 추가하는 함수
@@ -178,16 +163,14 @@
 
 // function handleTitleClick() {
 //   // const clickedClass = 'active'
-  
+
 //   h1.classList.toggle('active') // 한번만 사용하기 때문에 클래스 이름 사용
 // }
-
 
 // h1.addEventListener("click", handleTitleClick)
 
 //=========================================================================================
 //[4]
-
 
 // const loginInput = document.querySelector('#login-form input')
 // const loginButton = document.querySelector('#login-form button')
@@ -256,33 +239,33 @@
 //=========================================================================================
 //[4.7]
 
-const loginForm = document.querySelector('#login-form')
-const loginInput = document.querySelector('#login-form input')
-const greeting = document.querySelector('#greeting')
+const loginForm = document.querySelector('#login-form');
+const loginInput = document.querySelector('#login-form input');
+const greeting = document.querySelector('#greeting');
 
-const HIDDEN_CLASSNAME = "hidden"
-const USERNAME_KEY = "username"
+const HIDDEN_CLASSNAME = 'hidden';
+const USERNAME_KEY = 'username';
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME)
+  loginForm.classList.add(HIDDEN_CLASSNAME);
 
-  localStorage.setItem(USERNAME_KEY, loginInput.value)
-  paintGreetings()
+  localStorage.setItem(USERNAME_KEY, loginInput.value);
+  paintGreetings();
 }
 
 function paintGreetings() {
-  const username = localStorage.getItem(USERNAME_KEY)
-  greeting.innerText = `Hello ${username}`
-  greeting.classList.remove(HIDDEN_CLASSNAME)
+  const username = localStorage.getItem(USERNAME_KEY);
+  greeting.innerText = `Welcome ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-const savedUsername = localStorage.getItem(USERNAME_KEY)
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if(savedUsername === null) {
+if (savedUsername === null) {
   // show the form
   loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener('submit',onLoginSubmit)
+  loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   // show the greetings
-  paintGreetings()
+  paintGreetings();
 }
