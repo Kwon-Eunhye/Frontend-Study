@@ -9,7 +9,8 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function deleteTodo(event) {
-  const deleteLi = event.target.parentElement;
+  const deleteLi = event.target.
+  console.log(deleteLi)
   deleteLi.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(deleteLi.id));  // parseInt 문자열을 숫자로 바꿔줌
   saveToDos();
@@ -21,7 +22,7 @@ function paintToDo(newTodo) { // object를 받음
   const span = document.createElement("span");
   span.innerText = newTodo.text;  // object 중 text 속성을 텍스트로 보여줌
   const btn = document.createElement("button");
-  btn.innerText = "X";
+  btn.innerHTML ='<span class="material-symbols-rounded">close</span>'
   btn.addEventListener("click", deleteTodo);
   li.appendChild(span);
   li.appendChild(btn);

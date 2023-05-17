@@ -242,6 +242,8 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
+const toDoDisplay = document.querySelector('#todo')
+const toDoQuote = document.querySelector('#quote');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -259,6 +261,11 @@ function paintGreetings() {
   greeting.innerText = `Welcome ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
+
+function elementDisplay() {
+  toDoDisplay.style.display = "block"
+  toDoQuote.style.display = "none"
+}
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
@@ -268,4 +275,5 @@ if (savedUsername === null) {
 } else {
   // show the greetings
   paintGreetings();
+  elementDisplay();
 }

@@ -1,9 +1,9 @@
 // const images = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.png'];
 const body = document.querySelector("body");
-const images = ["6.png", "1.jpeg"];
+const images = ["6.jpeg", "7.png", "8.jpg"];
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-body.style.backgroundImage = `url(./img/${chosenImage}) `;
+body.style.backgroundImage = `url(./img/${chosenImage})`;
 const h2 = document.querySelector("#clock");
 
 // console.log(chosenImage)
