@@ -243,7 +243,7 @@ const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
 const toDoDisplay = document.querySelector('#todo')
-const toDoQuote = document.querySelector('#quote');
+const QuoteDisplay = document.querySelector('#quote');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -264,7 +264,7 @@ function paintGreetings() {
 
 function elementDisplay() {
   toDoDisplay.style.display = "block"
-  toDoQuote.style.display = "none"
+  QuoteDisplay.style.display = "none"
 }
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 

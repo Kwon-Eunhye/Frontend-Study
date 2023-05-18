@@ -1,6 +1,6 @@
 // const images = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.png'];
 const body = document.querySelector("body");
-const images = ["6.jpeg", "7.png", "8.jpg"];
+const images = ["6.jpeg", "7.png"];
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 body.style.backgroundImage = `url(./img/${chosenImage})`;

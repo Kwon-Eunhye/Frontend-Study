@@ -9,8 +9,8 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function deleteTodo(event) {
-  const deleteLi = event.target.
-  console.log(deleteLi)
+
+  const deleteLi = event.target.parentNode.parentNode;
   deleteLi.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(deleteLi.id));  // parseInt 문자열을 숫자로 바꿔줌
   saveToDos();
