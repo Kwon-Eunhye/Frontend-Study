@@ -1,14 +1,14 @@
-.form-control {
+.formcontrol {
   margin: 0.5rem 0;
 }
 
-.form-control label {
+.formcontrol label {
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.form-control input {
+.formcontrol input {
   display: block;
   width: 100%;
   border: 1px solid #ccc;
@@ -17,17 +17,17 @@
   padding: 0 0.25rem;
 }
 
-.form-control input:focus {
+.formcontrol input:focus {
   outline: none;
   background: #fad0ec;
   border-color: #8b005d;
 }
 
-.form-control.invalid input {
+.formcontrol.invalid input {
   border-color: red;
   background: tomato;
 }
 
-.form-control.invalid label {
+.formcontrol.invalid label {
   color: red;
 }
